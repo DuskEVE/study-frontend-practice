@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        iframe{
+            border: 5px solid rgb(111, 118, 156);
+            box-shadow: 10px 10px rgb(77, 77, 77);
+        }
+        .container{
+            background-color: antiquewhite;
+            margin: 20px;
+        }
+        .links{
+            justify-self: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .iframe-group{
+            display: grid;
+            grid-template-areas: '1 2' '3 4';
+        }
+        .iframe-box{
+            background-color: wheat;
+        }
+        .iframe-box-1-1{grid-area: 1;}
+        .iframe-box-1-2{grid-area: 2;}
+        .iframe-box-2-1{grid-area: 3;}
+        .iframe-box-2-2{grid-area: 4;}
+
+    </style>
+</head>
+<body>
+
+    <div class="container nav" id="top">
+
+        <div class="links">
+            <a href="#item1">一樓</a>
+            <a href="#item2">YouTube</a>
+            <a href="#item3">Google map</a>
+        </div>
+        <hr>
+    </div>
+    
+    <div class="container" id="item1">
+
+        <iframe src="./floor/f1.html" width="400" height="300" frameborder="0"></iframe><br><br>
+        <a href="#top">回到最上層</a>
+        <hr>
+
+    </div>
+
+    <div class="container" id="item2">
+
+        <iframe width="720" height="480" src="https://www.youtube.com/embed/IKjMZjR57-E?si=kAyebnec5w3zX7Mj" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe><br><br>
+        <a href="#top">回到最上層</a>
+        <hr>
+
+    </div>
+
+    <div class="container" id="item3">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036499805718!2d121.41694067538774!3d25.044129277809734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1696388170325!5m2!1szh-TW!2stw" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+        <a href="#top">回到最上層</a>
+        <hr>
+
+    </div>
+
+    <div class="iframe-group">
+
+        <div class="iframe-box iframe-box-1-1">
+            <iframe width="600" height="450" src="https://www.youtube.com/embed/IKjMZjR57-E?si=kAyebnec5w3zX7Mj" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="iframe-box iframe-box-1-2"></div>
+
+        <div class="iframe-box iframe-box-2-1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036499805718!2d121.41694067538774!3d25.044129277809734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1696388170325!5m2!1szh-TW!2stw" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="iframe-box iframe-box-2-2"></div>
+
+    </div>
+
+</body>
+</html>

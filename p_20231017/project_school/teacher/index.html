@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table{
+            width: 100%;
+        }
+        td{
+            height: 30px;
+            font-size: 26px;
+        }
+        td > a{
+            text-decoration: none;
+        }
+        table,tr,th,td{
+            border: 2px solid;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+        /* .table-head{
+            background-color: antiquewhite;
+        } */
+        tr:nth-of-type(1){
+            background-color: antiquewhite;
+        }
+        .table-odd{
+            background-color: lightgray;
+        }
+        .container > a{
+            text-decoration: none;
+        }
+        .nav{
+            justify-content: center;
+            margin-top: 40px;
+            background-color: antiquewhite;
+            height: 60px;
+            display: flex;
+        }
+        .nav > a{
+            margin: 20px 40px 0 40px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .add-btn{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../student/index.html">Student</a>
+        <a href="">Teacher</a>
+    </div>
+    <div class="container">
+
+        <h3>Teacher list</h3>
+        <div class="add-btn">
+            <a href="./create.html"><button>+</button></a>
+        </div>
+        <!-- <a href="./insert.html">Add</a> -->
+        <table>
+            <tr class="table-head">
+                <th>id</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>pic</th>
+                <th>action</th>
+            </tr>
+            <tr class="table-odd">
+                <td>1</td>
+                <td>calli</td>
+                <td>0911-111-111</td>
+                <td>
+                    <img src="https://picsum.photos/id/36/100/100" alt="">
+                    cali.jpg
+                </td>
+                <td>
+                    <a href="./edit.html?id=1">edit</a>
+                    <a href="./del.html?id=1">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ina</td>
+                <td>0922-222-222</td>
+                <td>
+                    <img src="https://picsum.photos/id/9/100/100" alt="">
+                    ina.jpg
+                </td>
+                <td>
+                    <a href="./edit.html?id=2">edit</a>
+                    <a href="./del.html?id=2">delete</a>
+                </td>
+            </tr>
+            <tr class="table-odd">
+                <td>3</td>
+                <td>peko</td>
+                <td>0933-333-333</td>
+                <td>
+                    <img src="https://picsum.photos/id/7/100/100" alt="">
+                    peko.jpg
+                </td>
+                <td>
+                    <a href="./edit.html?id=3">edit</a>
+                    <a href="./del.html?id=3">delete</a>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+</html>
+

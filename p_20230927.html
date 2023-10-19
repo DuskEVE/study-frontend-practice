@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: brown;
+        }
+        #test-id{
+            color: darkblue;
+        }
+        .test-class{
+            color: darkgreen;
+        }
+        table, tr, td{
+            border: 2px solid black;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formatting Elements</h1>
+
+    <h3>換行(br)</h3>
+    <p>
+        Lorem ipsum dolor sit amet. <br>
+        Lorem ipsum dolor sit amet. <br>
+        Lorem ipsum dolor sit amet. <br>
+    </p>
+    <hr>
+
+    <h3>段落(p)</h3>
+    <p>
+        第一段
+        Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        第二段
+        Lorem ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>粗體(b)</h3>
+    <p>
+        <b>Lorem</b> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>斜體(i)</h3>
+    <p>
+        <i>Lorem</i> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <!-- strong在視覺效果上會和b類似，會使字體加粗，但是還有額外的效果，使搜尋引擎明白這其中的內容是重要的(有語意的) -->
+    <h3>重點(strong),有語意的</h3>
+    <p>
+        <strong>Lorem</strong> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <!-- heading(h1 ~ h6)也會使搜尋引擎明白其中的內容是重要的(有語意的) -->
+    <h3>h1 ~ h6,有語意的</h3>
+    <h1>h1 Lorem ipsum dolor sit amet.</h1>
+    <h2>h2 Lorem ipsum dolor sit amet.</h2>
+    <h3>h3 Lorem ipsum dolor sit amet.</h3>
+    <h4>h4 Lorem ipsum dolor sit amet.</h4>
+    <h5>h5 Lorem ipsum dolor sit amet.</h5>
+    <h6>h6 Lorem ipsum dolor sit amet.</h6>
+    <hr>
+
+    <h3>em,有語意的</h3>
+    <p>
+        <em>Lorem</em> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>small,有語意的</h3>
+    <p>
+        <small>Lorem</small> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>pre,會保留內容文字的排版</h3>
+    <p>
+        <pre>
+            Lorem ipsum dolor,
+                 sit amet consectetur adipisicing elit. Pariatur reiciendis,
+                  velit ducimus quod nesciunt natus illum iusto est, earum molestiae possimus rerum vel rem,
+                   quo explicabo excepturi obcaecati vitae accusamus.
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid cupiditate quod totam doloremque esse, reprehenderit enim rem,
+                 aperiam deserunt officia error nemo nostrum veniam provident dicta?
+            Vero rem optio repellendus.
+        </pre>
+    </p>
+    <hr>
+
+    <h3>del</h3>
+    <p>
+        <del>Lorem</del> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>sub</h3>
+    <p>
+        <sub>Lorem</sub> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>sup</h3>
+    <p>
+        <sup>Lorem</sup> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>mark</h3>
+    <p>
+        <mark>Lorem</mark> ipsum dolor sit amet.
+    </p>
+    <hr>
+
+    <h3>Order list(有序的列表)</h3>
+    <!-- start:從指定的數字開始 -->
+    <ol start="10">
+        <li>something</li>
+        <li>is in</li>
+        <li>here</li>
+        <li>i don't know</li>
+        <li>what it is</li>
+    </ol>
+
+    <!-- type="I"會將有序列表的項目編號從整數改為羅馬數字 -->
+    <ol type="I">
+        <li>something</li>
+        <li>is in</li>
+        <li>here</li>
+        <li>i don't know</li>
+        <li>what it is</li>
+    </ol>
+    <hr>
+
+    <h3>Unorder list(無序的列表)</h3>
+    <ul>
+        <li>something</li>
+        <li>is in</li>
+        <li>here</li>
+        <li>i don't know</li>
+        <li>what it is</li>
+    </ul>
+    <hr>
+
+    <h3>Link A tag</h3>
+    <ol>
+        <!-- ./ 同一層 -->
+        <!-- ../ 上一層 -->
+        <!-- ../../ 上上一層 -->
+        <li>
+            <a href="floor/f1.html">1樓</a>
+        </li>
+        <li>
+            <a href="floor/f2.html">2樓</a>
+        </li>
+        <li>
+            <a href="floor/f3.html">3樓</a>
+        </li>
+    </ol>
+
+    <h3>Link A tag</h3>
+    <ol>
+        <li>
+            <a href="floor/f1.html">
+                <img src="https://picsum.photos/id/237/300/300" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="floor/f2.html">
+                <img src="https://picsum.photos/seed/picsum/300/300" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="floor/f3.html">
+                <img src="https://picsum.photos/300/300?grayscale" alt="">
+            </a>
+        </li>
+    </ol>
+    <hr>
+
+    <h1>table</h1>
+    <h3 id="test-id">test id</h3>
+    <h3 class="test-class">test class</h3>
+    <table>
+        <tr>
+            <th width="100px" >No.</th>
+            <th>圖片(連結)</th>
+            <th width="100px">樓層</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td>
+                <a href="floor/f1.html">
+                    <img src="https://picsum.photos/id/237/300/300" alt="">
+                </a>
+            </td>
+            <td align="center">1樓</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>
+                <a href="floor/f2.html">
+                    <img src="https://picsum.photos/seed/picsum/300/300" alt="">
+                </a>
+            </td>
+            <td align="center">2樓</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>
+                <a href="floor/f3.html">
+                    <img src="https://picsum.photos/300/300?grayscale" alt="">
+                </a>
+            </td>
+            <td align="center">3樓</td>
+        </tr>
+    </table>
+
+    <h1>A heading</h1>
+    <a href="tw.yahoo.com">Link</a>
+
+    <div>
+        &copy;
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 40%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        table, tr, td{
+            border: 2px ;
+            border-collapse: collapse;
+        }
+        table{
+            margin: auto;
+        }
+        td{
+            text-align: center;
+            margin: auto;
+            height: 30px;
+        }
+        #picture{
+            margin-left: 135px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Edit data</h3>
+        <form action="" enctype="multipart/form-data" method="get">
+            <table>
+                <tr>
+                    <td>
+                        &nbsp;
+                        <label for="name">name:</label>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">phone:</label>
+                        <input type="text" name="phone" id="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- <label for="picture">picture:</label> -->
+                        <input type="file" name="picture" id="picture">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

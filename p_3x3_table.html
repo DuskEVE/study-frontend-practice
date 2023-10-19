@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* width: 100%; */
+            /* height: 80vh; */
+            background-color: darkorange;
+            font-size: 50px;
+        }
+        table, tr, td{
+            color: darkblue;
+        }
+        td{
+            /* width: 30%; */
+            /* height: 30%; */
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .s1 > td{
+            color: brown;
+        }
+        .s2 > td{
+            color: darkblue;
+        }
+        .s3 > td{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>9宮格</h3>
+    <table>
+        <tr class="s1">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr class="s2">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr class="s3">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <br><br><hr>
+
+    <h3>9宮格</h3>
+    <table>
+        <tr class="s1">
+            <td colspan="2">1</td>  
+            <!-- <td>2</td> -->
+            <td rowspan="3">3</td>
+        </tr>
+        <tr class="s2">
+            <td>4</td>
+            <td>5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr class="s3">
+            <td>7</td>
+            <td>8</td>
+            <!-- <td>9</td> -->
+        </tr>
+    </table>
+</body>
+</html>

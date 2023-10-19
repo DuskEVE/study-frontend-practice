@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        table{
+            margin: auto;
+        }
+        table,tr,td{
+            border: 2px solid black;
+        }
+        td{
+            height: 200px;
+            width: 200px;
+            vertical-align: top;
+            text-align: center;
+        }
+        .summary{
+            height: 100px;
+        }
+        .c-1{
+            background-color: rgb(207, 185, 159);
+        }
+        .c-2{
+            background-color: rgb(166, 206, 207);
+        }
+        .c-3{
+            background-color: rgb(158, 150, 144);
+        }
+        .p1-1{
+            background-color: rgb(219, 191, 157);
+        }
+        .p1-2{
+            background-color: rgb(147, 199, 182);
+        }
+        .p1-3{
+            background-color: rgb(192, 204, 165);
+        }
+        .p1-4{
+            background-color: rgb(218, 175, 167);
+        }
+        .p1-5{
+            background-color: rgb(167, 166, 166);
+        }
+        .p2-1{
+            background-color: rgb(232, 208, 255);
+        }
+        .p2-2{
+            background-color: rgb(196, 196, 243);
+        }
+        .p3-1{
+            background-color: rgb(183, 210, 211);
+        }
+        .p3-2{
+            background-color: rgb(156, 163, 149);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav" id="top">
+        <a href="#cnr">康乃爾筆記</a>
+        <a href="#pro">獲利世代</a>
+    </div>
+    
+    <hr>
+
+    <div class="t-1">
+
+        <h1 id="cnr">康乃爾筆記</h1><br>
+        <div class="nav"><a href="#top">top</a></div><br>
+        <table>
+            <tr>
+                <td rowspan="2" class="c-1">
+                    <div>
+                        <h3>關鍵內容</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+                            Consectetur deleniti eaque voluptas exercitationem possimus laborum veritatis eligendi non impedit soluta.
+                        </p>
+                    </div>
+                </td>
+                <td colspan="2" rowspan="2" class="c-2">筆記欄</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3" class="summary c-3">摘要欄</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </table>
+
+    </div>
+
+    <br><hr><br>
+
+    <div class="t-2">
+
+        <h1 id="pro">獲利世代</h1><br>
+        <div class="nav"><a href="#top">top</a></div><br>
+        <table>
+            <tr>
+                <td rowspan="2" colspan="2" class="p1-1"><p>關鍵合作夥伴</p></td>
+                <td class="p1-2">關鍵活動</td>
+                <td rowspan="2" colspan="2" class="p1-3">價值主張</td>
+                <td class="p1-4">顧客關係</td>
+                <td rowspan="2" colspan="2" class="p1-5">目標客層</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <td class="p2-1">關鍵資源</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <td class="p2-2">通路</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="4" class="p3-1">成本結構</td>
+                <!-- <td></td>
+                <td></td>
+                <td></td>
+                <td></td> -->
+                <td colspan="4" class="p3-2">收益流</td>
+                <!-- <td></td>
+                <td></td>
+                <td></td>
+                <td></td> -->
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>

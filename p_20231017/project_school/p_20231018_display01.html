@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        table, tr, td{
+            border: 2px solid;
+            border-collapse: collapse;
+        }
+        table{
+            width: 80vw;
+            height: 80vh;
+        }
+        .display-block{
+            display: block;
+        }
+        .display-inline-block{
+            display: inline-block;
+        }
+        .display-inline{
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>block</h3>
+        <h4>可以換行</h4>
+        <h4>可以調大小</h4>
+        <span>1111</span>
+        <span>2222</span>
+        <span class="display-block">3333</span>
+        <span>4444</span>
+
+        <table>
+            <tr>
+                <th>block</th>
+                <td>可調整大小/可換行</td>
+                <td>
+                    <h3>原始</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere!</p>
+                    <h3>修改</h3>
+                    <p>Lorem, ipsum dolor sit <div class="display-block">amet consectetur</div> adipisicing elit. Soluta, facere!</p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>inline-block</th>
+                <td>可調整大小/可換行</td>
+                <td>
+                    <h3>原始</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere!</p>
+                    <h3>修改</h3>
+                    <p>Lorem, ipsum dolor sit <div class="display-inline-block">amet consectetur</div> adipisicing elit. Soluta, facere!</p>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>inline</th>
+                <td>不可調整大小/可換行</td>
+                <td>
+                    <h3>原始</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere!</p>
+                    <h3>修改</h3>
+                    <p>Lorem, ipsum dolor sit <div class="display-inline">amet consectetur</div> adipisicing elit. Soluta, facere!</p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
