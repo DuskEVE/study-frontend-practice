@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+        }
+        .back-img{
+            position: absolute;
+            background-image: url("https://picsum.photos/id/42/1980/1080");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-img"></div>
+
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Create</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Edit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Delete</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container vw-100 vh-100 d-flex justify-content-center align-items-center pt-3">
+
+        <div class="container w-75 h-100">
+            <form action="" method="" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>Create product</legend>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3 text-bg-secondary rounded pb-1">
+                            <label for="name">name:</label>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="name" >
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-12 col-md-5 mb-3 text-bg-secondary rounded pb-1">
+                            <label for="img-file" >img file:</label>
+                            <input class="form-control" type="file" name="img-file" >
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3 text-bg-secondary rounded pb-1">
+                            <label for="price">price:</label>
+                            <input class="form-control" type="number" id="price" name="price">
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-12 col-md-5 mb-3 text-bg-secondary rounded pb-1">
+                            <label for="adrass">unit:</label>
+                            <input class="form-control" type="text" id="unit" name="unit">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col mb-3 text-bg-secondary rounded pb-1">
+                            <label for="comment">備註:</label>
+                            <textarea class="form-control" name="comment" id="" rows="5" placeholder="write something"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col mb-3">
+                            <button class="btn btn-primary" type="submit" id="submit">submit</button>
+                            <button class="btn btn-primary" type="reset" id="reset">reset</button>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
