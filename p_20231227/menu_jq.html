@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <div class="container align-middle bg-light fixed-top d-flex">
+            <div class="col-7 text-end"><h3>購物車<button class="btn btn-primary add-btn">新增商品</button></h3></div>
+            <div class="col-5 d-flex justify-content-center align-items-center">
+                <span class="total-price text-center">總價為: 0元</span>
+            </div>
+    </div>
+
+    <div class="placeholder" style="height: 45px;"></div>
+
+    <div class="container">
+        <table class="table align-middle text-center">
+            <tbody class="tbody">
+                <tr>
+                    <th>商品</th>
+                    <th>商品價格</th>
+                    <th>購買數量</th>
+                    <th>總價</th>
+                </tr>
+                <tr>
+                    <td><img src="https://picsum.photos/id/1/150/150" alt=""></td>
+                    <td><input type="number" class="item-price item-price-1 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-count item-count-1 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-total-price item-total-price-1 form-control" id="" name="" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td><img src="https://picsum.photos/id/2/150/150" alt=""></td>
+                    <td><input type="number" class="item-price item-price-2 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-count item-count-2 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-total-price item-total-price-2 form-control" id="" name="" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td><img src="https://picsum.photos/id/3/150/150" alt=""></td>
+                    <td><input type="number" class="item-price item-price-3 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-count item-count-3 form-control" id="" name="" value="0" min="0"></td>
+                    <td><input type="number" class="item-total-price item-total-price-3 form-control" id="" name="" value="0" readonly></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- <div class="container bg-light total-price text-center">
+        總價為: 0元
+    </div> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./menu_jq.js"></script>
+</body>
+</html>

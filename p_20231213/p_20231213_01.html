@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            background-color: gray;
+        }
+        .goose-timer{
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .goose{
+            width: 250px;
+            height: 300px;
+            background-image: url("./25f422d8af9d536c93a5ffccd2d19204.gif");
+            background-size: cover;
+            position: absolute;
+            /* animation-duration: 6s; */
+            /* animation-name: move; */
+            /* animation-fill-mode: forwards; */
+        }
+        .goose.move{
+            transform: translateX(70vw);
+            transition-duration: 6s;
+        }
+        /* @keyframes move{
+            from {left: 0;}
+            to {left: 80%;}
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row mt-5 text-center">
+            <div class="col-4">
+                <button class="btn btn-primary">start</button>
+            </div>
+
+            <div class="col-2">
+                <span class="goose-timer">6</span>
+            </div>
+
+            <div class="col-6 d-flex justify-content-center border bg-secondary">
+                <div class="box box-1 m-2"></div>
+                <div class="box box-2 m-2"></div>
+                <div class="box box-3 m-2"></div>
+            </div>
+        </div>
+
+        <div class="d-flex" style="width: 100%;">
+            <div class="goose"></div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector(".btn");
+        const box1 = document.querySelector(".box-1");
+        const box2 = document.querySelector(".box-2");
+        const box3 = document.querySelector(".box-3");
+        const gooseTimer = document.querySelector(".goose-timer");
+        const goose = document.querySelector(".goose");
+        let boxs = [box1, box2, box3];
+        let colors = ["green", "yellow", "red"];
+        let timeCount = 6;
+
+        btn.addEventListener("click", () => {
+            btn.setAttribute("style", "display: none");
+            goose.classList.remove("move");
+            setTimeout(() => goose.classList.add("move"), 10);
+
+            timeCount = 6;
+            gooseTimer.innerText = timeCount;
+            let time = 0;
+            let timer = setInterval(()=> {
+                timeCount--;
+                gooseTimer.innerText = timeCount;
+                if(timeCount === 0) clearInterval(timer);
+            }, 1000);
+
+            boxs.forEach(element => element.setAttribute("style", `background: gray`));
+            boxs.forEach((element, index) => {
+                setTimeout(() => element.setAttribute("style", `background: ${colors[index]}`), time);
+                if(index !== boxs.length-1){
+                    setTimeout(() => element.setAttribute("style", `background: gray`), time+3000);
+                }
+                time += 3000;
+            });
+
+            setTimeout(() => btn.setAttribute("style", "display: inline"), time-3000);
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
