@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container bg-secondary p-3">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>Operate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Gura</td>
+                    <td>
+                        <button class="btn btn-danger delete-btn">X</button>
+                        <button class="btn btn-primary add-btn">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mumei</td>
+                    <td>
+                        <button class="btn btn-danger delete-btn">X</button>
+                        <button class="btn btn-primary add-btn">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fubuki</td>
+                    <td>
+                        <button class="btn btn-danger delete-btn">X</button>
+                        <button class="btn btn-primary add-btn">+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
+
+<script>
+    const deleteBtn = $('.delete-btn');
+    const addBtn = $('.add-btn');
+
+    const removeRow = (event) => {
+        let row = $(event.target).parent().parent();
+        row.empty();
+    };
+    const addRow = (event) => {
+        let row = $(event.target).parent().parent();
+        let element = row.clone(true);
+        $(element).insertAfter($(event.target).parent().parent());
+        // row.next().find('.delete-btn').on('click', removeRow);
+        // row.next().find('.add-btn').on('click', addRow);
+    };
+
+    deleteBtn.on('click', removeRow);
+    addBtn.on('click', addRow);
+</script>
